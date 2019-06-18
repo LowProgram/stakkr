@@ -1,0 +1,17 @@
+config:
+  service:
+    nginx:
+      enabled: true
+  proxy:
+    enabled: true
+    domain: localhost
+  
+  aliases:
+
+services: 
+  - webservers
+
+commands:
+
+messages:
+  - Nginx is up
