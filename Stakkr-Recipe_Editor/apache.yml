@@ -1,0 +1,18 @@
+config:
+  service:
+    apache:
+      enabled: true
+  proxy:
+    enabled: true
+    domain: localhost
+  
+  aliases:
+
+services: 
+  - webservers
+
+commands:
+
+messages:
+  - Apache is up
+

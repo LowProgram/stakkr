@@ -1,0 +1,21 @@
+config:
+  service:
+    postgres:
+      enabled: true
+      version: latest
+      ram: 1024M
+      password: postgres
+  proxy:
+    enabled: true
+    domain: localhost
+  
+  aliases:
+
+services: 
+  - databases
+
+commands:
+
+messages:
+  - PostgresSQL is ready
+
