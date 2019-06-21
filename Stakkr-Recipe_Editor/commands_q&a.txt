@@ -1,0 +1,20 @@
+stakkr-maker <command> <--help> 
+
+    recipelst
+        #Gives a list of all user created recipes
+    components
+        #Gives a list of available services
+        ??? Create new services
+    create <components> <recipeName>
+        #Creates a new recipe; user needs to input  all components  he wants and the name of the recipe . confirmation required 
+    edit <recipeName> <option> 
+        #Edit an existing recipe; 
+            1. change version of a service 
+            2. switch service 
+            3.??? Change Network config ???
+    delete <recipeName>
+        #Deletes the recipe after a confirmation
+
+    
+    share/import other user recipes?
+    
