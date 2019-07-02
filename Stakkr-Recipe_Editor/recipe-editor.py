@@ -1,39 +1,30 @@
-inputFiles = []
-headerlist = ['service', 'proxy', 'aliases', 'services', 'commands', 'messages']
-
+input_list = []
+header_list = ['service', 'proxy', 'aliases', 'services', 'commands', 'messages']
 # User input; the files that need to be merged
 print('Enter the components you want to use: ')
-userFileChoice = input()
-while userFileChoice != '':
-    inputFiles.append(userFileChoice)
-    userFileChoice = input()
+user_input = input()
+while user_input != '':
+    input_list.append(user_input)
+    user_input = input()
 
 # Ask user what name the recipe is gonna be
-endFilename = input('Name your recipe: ')
+end_f = input('Name your recipe: ')
 
-def mergeData(readData : str):
-    for header in headerlist:
-        for i in readData[header]:
-            outputFile.write(readData[header])
+def merge_data(f_data : str):
+    for header in header_list:
+        for i in f_data[header]:
+            output_f.write(f_data[header])
 
-with open(endFilename, 'w') as outputFile:
-    # Should walk trough the inputFiles list opening and merging one file at the time
-    for i in inputFiles:
+with open(end_f, 'w') as output_f:
+    # Should walk trough the input_list list opening and merging one file at the time
+    for i in input_list:
         with open(i, 'r') as f:
-            readData = f.read()
+            f_data = f.read()
             f.close()
             # First file determines format
-            if i == inputFiles[0]:
-                outputFile.write(readData)
+            if i == input_list[0]:
+                output_f.write(f_data)
 
-            # Search data and merge this into the outputFile
+            # Search data and merge this into the output_f
             else:
-                mergeData(readData)
-
-                    
-
-
-
-
-
-
+                merge_data(f_data)
