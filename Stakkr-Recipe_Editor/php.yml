@@ -20,7 +20,7 @@ services:
   - php
 
 commands:
-   Download composer:
+  Download composer:
     container: php
     user: www-data
     args: [php, -r, "copy('https://getcomposer.org/download/1.8.0/composer.phar', '/home/www-data/bin/composer');"]

@@ -1,5 +1,5 @@
 config:
-  services:
+  service:
     mysql:
       enabled: true
       version: 8.0
